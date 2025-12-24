@@ -24,6 +24,27 @@ excitation assumptions are adopted.
 
 The following YAML file summarizes the tardis_example setup:
 
+
+Monte Carlo settings in this example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The example configuration uses a small number of Monte Carlo packets and
+simple physical assumptions to ensure short run times.
+
+Key Monte Carlo parameters include:
+
+``nthreads``
+  Controls the number of CPU threads used during the Monte Carlo packet
+  propagation. Increasing this value can significantly reduce runtime on
+  multi-core machines. Using more threads than available physical cores
+  may reduce performance.
+
+``seed``
+  Sets the random seed for the Monte Carlo simulation. Defining a seed
+  ensures reproducible results across runs, which is recommended when
+  comparing model outputs.
+
+
 .. literalinclude:: tardis_example.yml
     :language: yaml
 
